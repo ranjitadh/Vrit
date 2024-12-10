@@ -1,0 +1,134 @@
+/* General Styles */
+body, html {
+    margin: 0px;
+    padding: 0;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(90deg, #d9d963, #f3629c, #d458ad);
+
+    overflow: hidden;
+   
+ 
+
+  }
+  
+  /* Background Container */
+  .background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  /* Scrollable Container */
+  .scroll-container {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    overflow-y: scroll; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    cursor:move;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  }
+  
+  /* Hide Scrollbar */
+  .scroll-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+ 
+  
+  /* Cards */
+  .card {
+    position: relative;
+    width: 32%;
+    height: 375px; 
+    background: rgba(255, 255, 255, 0.1); 
+    border-radius: 15px;
+    backdrop-filter: blur(20px); 
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    scroll-snap-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 50%;
+
+   border-style:solid;
+   border-color:#FFAABB;
+
+}
+
+    
+  
+  
+  /* Hover Effect */
+  .card:hover {
+    transform: scale(1.15); 
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease; 
+    z-index: 10; 
+}
+/* Summary Section */
+.summary {
+  width: 95%;
+  height: 120px;
+  padding: 10px; 
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.15); 
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center; 
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Summary */
+.summary:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3); 
+}
+
+
+  
+ 
+  .circle {
+    width: 60px; /* Adjust size */
+    height: 60px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    flex-shrink: 0; 
+    margin-bottom: -52px;
+
+  }
+
+  
+.content .line {
+    height: 12px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.content .line.large {
+    width: 90%;
+    margin-bottom: 25px;
+    margin-inline-start: 65px;
+}
+
+.content .line.small {
+    width: 60%;
+    margin-inline-start: 65px;
+}
+
+ 
+.scroll-container {
+    gap: 1px;
+}
